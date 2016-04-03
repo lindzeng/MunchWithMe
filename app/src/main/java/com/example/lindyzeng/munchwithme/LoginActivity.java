@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
+                                // don't actually need this part of getting name and username from db
                                 String name = jsonResponse.getString("name");
                                 String username = jsonResponse.getString("username");
 

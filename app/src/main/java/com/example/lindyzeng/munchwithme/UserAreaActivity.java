@@ -28,12 +28,18 @@ public class UserAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
 
+
+
         final Button bCreateEvent = (Button) findViewById(R.id.bCreateEvent);
         bCreateEvent.setOnClickListener(new View.OnClickListener() {
-            @Override
+            // @Override
+            Intent intent = getIntent();
+            String name = intent.getStringExtra("name");
+
             public void onClick(View v) {
-            Intent createEventIntent = new Intent(UserAreaActivity.this, CreateEvent.class);
-            UserAreaActivity.this.startActivity(createEventIntent);
+                Intent createEventIntent = new Intent(UserAreaActivity.this, CreateEvent.class);
+                createEventIntent.putExtra("name", name);
+                UserAreaActivity.this.startActivity(createEventIntent);
             }
         });
 
@@ -52,12 +58,5 @@ public class UserAreaActivity extends AppCompatActivity {
             Toast.makeText(UserAreaActivity.this, tv.getText().toString(), Toast.LENGTH_SHORT).show();
         }
     }
-
-    String result = null;
-    InputStream is = null;
-
-    // Intent intent = getIntent();
-    // String name = intent.getStringExtra("name");
-    // String username = intent.getStringExtra("username");
 
 }

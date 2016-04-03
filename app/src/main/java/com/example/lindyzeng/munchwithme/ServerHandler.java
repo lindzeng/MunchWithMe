@@ -29,11 +29,12 @@ public class ServerHandler extends StringRequest {
     private static final String CREATE_ACTIVITY_URL = "http://munchwithme.comxa.com/create_activity.php";
     private Map<String, String> params;
 
-    public ServerHandler(String time, String place, Response.Listener<String> listener) {
+    public ServerHandler(String name, String location, String time, Response.Listener<String> listener) {
         super(Method.POST, CREATE_ACTIVITY_URL, listener, null);
         params = new HashMap<>();
+        params.put("name", name);
+        params.put("location", location);
         params.put("time", time);
-        params.put("place", place);
     }
 
     @Override
