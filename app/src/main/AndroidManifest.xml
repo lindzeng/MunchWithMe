@@ -18,7 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
+
         <activity android:name=".UserAreaActivity" />
+
+
+
     </application>
+
+
 
 </manifest>
