@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MunchWithMe</string>
     <string name="title_activity_login2">LoginActivity2</string>
+    <string name="title_activity_create_event">CreateEvent</string>
+    <string name="Time">Time</string>
+    <string name="Location">Location</string>
+    <string name="Name">Name</string>
 </resources>

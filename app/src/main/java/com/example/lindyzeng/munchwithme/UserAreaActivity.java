@@ -28,21 +28,21 @@ public class UserAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
 
-        // final Button bCreateEvent = (Button) findViewById(R.id.bCreateEvent);
-        //  bCreateEvent.setOnClickListener(new View.OnClickListener() {
-        //   @Override
-        // public void onClick(View v) {
-        // Intent createEventIntent = new Intent(UserAreaActivity.this, CreateEvent.class);
-        // UserAreaActivity.this.startActivity(createEventIntent);
-        // }
-        // });
+        final Button bCreateEvent = (Button) findViewById(R.id.bCreateEvent);
+        bCreateEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent createEventIntent = new Intent(UserAreaActivity.this, CreateEvent.class);
+            UserAreaActivity.this.startActivity(createEventIntent);
+            }
+        });
 
         String[] names = {"Lindy", "Luisa", "Jessica"};
 
         ListView listv = (ListView) findViewById(R.id.list);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.layout_userarea, R.id.name, names);
         listv.setAdapter(adapter);
-        listv.setOnItemClickListener(new ItemList());
+        // listv.setOnItemClickListener(new ItemList());
     }
 
     class ItemList implements AdapterView.OnItemClickListener {

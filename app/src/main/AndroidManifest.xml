@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lindyzeng.munchwithme">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,13 +18,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-
         <activity android:name=".UserAreaActivity" />
-
-
-
+        <activity
+            android:name=".CreateEvent"
+            android:label="@string/title_activity_create_event"
+            android:parentActivityName=".UserAreaActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.lindyzeng.munchwithme.UserAreaActivity" />
+        </activity>
     </application>
-
-
 
 </manifest>
